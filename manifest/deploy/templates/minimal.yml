@@ -64,6 +64,8 @@ services:
     restart: always
     volumes:
       - ./data/panel:/data
+    ports:
+      - "80:80"
     depends_on:
       mariadb:
         condition: service_started
